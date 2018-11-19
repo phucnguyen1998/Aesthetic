@@ -1,0 +1,135 @@
+$tablet-width:768px;
+
+.team-member{
+	padding: 50px 0;
+	background-color: #f3f6f8;
+	.site-heading{
+		margin-bottom: 60px;
+		overflow: hidden;
+		h2{
+			color: #333333;
+			display: inline-block;
+			font-weight: 700;
+			padding-bottom: 20px;
+			position: relative;
+			text-transform: uppercase;
+			&:after{
+				background: #fcdb16 none repeat scroll 0 0;
+				bottom: 0;
+				content: "";
+				height: 2px;
+				left: 50%;
+				margin-left: -25px;
+				position: absolute;
+				width: 50px;
+			}
+		}
+		p{
+			color: #333333;
+			padding-top: 5px;
+			line-height: 26px;
+			margin: 0;
+			text-transform: none;
+			font-weight: 400;
+			font-family: 'Open Sans', sans-serif;
+			font-size: 14px;
+		}
+	}
+	.item{
+		.team-member-info{
+			box-shadow: 0 0 74px rgba(15, 15, 15, 0.07);
+			.thumb-member{
+				overflow: hidden;
+				position: relative;
+				img{
+					border: none;
+					outline: none;
+					max-width: 100%;
+				}
+		}
+			.info-member{
+				background: #ffffff none repeat scroll 0 0;
+				margin: 0;
+				padding: 30px;
+				position: relative;
+				.designation{
+					background: #2b2b35  none repeat scroll 0 0;
+					left: 15%;
+					margin: -35px auto auto;
+					padding: 10px 15px;
+					position: absolute;
+					top: 0;
+					width: 70%;
+					h4{
+						color: #fcdb16;
+						font-weight: 600;
+						margin-bottom: 5px;
+						line-height: 1.2;
+						font-size: 18px;
+					}
+					span{
+						color: #ffffff;
+						font-family: "Montserrat",sans-serif;
+						margin: 0;
+						text-transform: uppercase;
+						}
+					}
+			p{
+				margin: 0;
+				margin-top: 30px;
+				color: #333333;
+				line-height: 26px;
+				text-transform: none;
+				font-weight: 400;
+				font-family: 'Open Sans', sans-serif;
+				font-size: 14px;
+			}
+			div.social{
+				margin-top:20px;
+				a{
+				background: #2b2b35;
+				border-radius: 50%;
+				color: #ffffff;
+				display: inline-block;
+				height: 35px;
+				line-height: 37px;
+				margin: 0 3px;
+				width: 35px;
+				&:hover{
+					background: #fcdb16;
+					color: #333333;
+					transition: all 0.35s ease-in-out;
+				}
+				}
+			}
+			}
+		}
+	}
+}
+
+@mixin tablet{
+	@media (max-width: #{$tablet-width}){
+		@content;
+	}
+}
+
+.designation{
+	@include tablet {
+		min-width: 90%;
+		left:5%!important;
+	}
+}
+
+.thumb-member{
+	@include tablet{
+		background-color: #f3f6f8;
+	}
+}
+
+.team-member-info{
+	@include tablet{
+		margin-bottom: 20px;
+	}
+}
+
+

@@ -1,0 +1,43 @@
+mixin member(src1)
+	.col-md-4.item
+		.team-member-info
+			.thumb-member
+				img(src=src1)
+			.info-member
+				.designation
+					h4 Adam Slander
+					span Chairman
+				p We are a team of multi-skilled and curious digital specialists who are always up for a challenge and learning as fast as digital is changing.
+				.social
+					a(href="#")
+						i(class="fa fa-facebook" aria-hidden="true")
+					a(href="#")
+						i(class="fa fa-twitter" aria-hidden="true")
+					a(href="#")
+						i(class="fa fa-google" aria-hidden="true")
+
+doctype html
+html
+	head
+		title Ottrali - Construction Building Company
+
+		meta(chaset="utf-8")
+		link(href="css/style.css" rel="stylesheet" type="text/css")
+		link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css")
+		link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css")
+		link(href="https://fonts.googleapis.com/css?family=Montserrat|Raleway|Work+Sans|Open+Sans" rel="stylesheet")
+	body
+		div.team-member.bg-gray.text-center
+			div.container
+				div.row
+					div.site-heading.text-center
+						div.col-md-8.col-md-offset-2.m-auto
+							h2 Team Members
+							p Able an hope of body. Any nay shyness article matters own removal nothing his forming. Gay own additions education satisfied the perpetual. If he cause manor happy. Without farther she exposed saw man led. Along on happy could cease green oh.
+				div.row
+					//member 1
+					+member("img/1.jpg")
+					//member 2
+					+member("img/2.jpg")
+					//member 3
+					+member("img/3.jpg")
